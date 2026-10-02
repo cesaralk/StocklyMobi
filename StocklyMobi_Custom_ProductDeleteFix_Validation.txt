@@ -1,0 +1,54 @@
+53/53 checks passed
+PASS | exists StocklyMobi/Adjustments.cs
+PASS | exists StocklyMobi/Barcode.cs
+PASS | exists StocklyMobi/BarcodeLabelHelper.cs
+PASS | exists StocklyMobi/Cashier.cs
+PASS | exists StocklyMobi/Dashboard.cs
+PASS | exists StocklyMobi/Database_Full.sql
+PASS | exists StocklyMobi/InventoryInvoiceForm.cs
+PASS | exists StocklyMobi/LookUpProduct.cs
+PASS | exists StocklyMobi/Product.cs
+PASS | exists StocklyMobi/ProductStockIn.cs
+PASS | exists StocklyMobi/Record.cs
+PASS | exists StocklyMobi/StockIn.cs
+PASS | exists StocklyMobi_MobileShop_Full_Database.sql
+PASS | C# lexical balance StocklyMobi/Adjustments.cs | balanced
+PASS | C# lexical balance StocklyMobi/Barcode.cs | balanced
+PASS | C# lexical balance StocklyMobi/BarcodeLabelHelper.cs | balanced
+PASS | C# lexical balance StocklyMobi/Cashier.cs | balanced
+PASS | C# lexical balance StocklyMobi/Dashboard.cs | balanced
+PASS | C# lexical balance StocklyMobi/InventoryInvoiceForm.cs | balanced
+PASS | C# lexical balance StocklyMobi/LookUpProduct.cs | balanced
+PASS | C# lexical balance StocklyMobi/Product.cs | balanced
+PASS | C# lexical balance StocklyMobi/ProductStockIn.cs | balanced
+PASS | C# lexical balance StocklyMobi/Record.cs | balanced
+PASS | C# lexical balance StocklyMobi/StockIn.cs | balanced
+PASS | project sql adds isActive
+PASS | project sql new table has isActive
+PASS | project sql inventory view active only
+PASS | project sql critical view active only
+PASS | root sql adds isActive
+PASS | root sql new table has isActive
+PASS | root sql inventory view active only
+PASS | root sql critical view active only
+PASS | unified delete archives product
+PASS | unified delete preserves history message
+PASS | unified delete blocks pending work only
+PASS | old strict history refusal removed
+PASS | hard delete removed from unified form
+PASS | legacy product delete archives product
+PASS | legacy product list active only
+PASS | active filter StocklyMobi/Adjustments.cs
+PASS | active filter StocklyMobi/Barcode.cs
+PASS | active filter StocklyMobi/BarcodeLabelHelper.cs
+PASS | active filter StocklyMobi/Cashier.cs
+PASS | active filter StocklyMobi/Dashboard.cs
+PASS | active filter StocklyMobi/LookUpProduct.cs
+PASS | active filter StocklyMobi/ProductStockIn.cs
+PASS | active filter StocklyMobi/Record.cs
+PASS | active filter StocklyMobi/StockIn.cs
+PASS | designer unchanged InventoryInvoiceForm.Designer.cs
+PASS | designer unchanged InventoryInvoiceForm.resx
+PASS | designer unchanged Product.Designer.cs
+PASS | designer unchanged Product.resx
+PASS | only intended files changed | actual=StocklyMobi/Adjustments.cs,StocklyMobi/Barcode.cs,StocklyMobi/BarcodeLabelHelper.cs,StocklyMobi/Cashier.cs,StocklyMobi/Dashboard.cs,StocklyMobi/Database_Full.sql,StocklyMobi/InventoryInvoiceForm.cs,StocklyMobi/LookUpProduct.cs,StocklyMobi/Product.cs,StocklyMobi/ProductStockIn.cs,StocklyMobi/Record.cs,StocklyMobi/StockIn.cs,StocklyMobi_MobileShop_Full_Database.sql

@@ -1,0 +1,25 @@
+STOCKLYMOBI DATABASE BACKUP FEATURE
+
+Open StocklyMobi.sln in Visual Studio.
+
+New screen:
+Settings > Database Backup
+
+Default behavior:
+- Automatic backup is enabled.
+- Default time is 11:00 PM every day.
+- The time can be changed in the Backup screen.
+- Backup Now creates a complete SQL Server .bak file.
+- Every successful backup is checked with RESTORE VERIFYONLY.
+- A Windows scheduled task runs the backup even when StocklyMobi is closed, while the configured Windows user is available.
+- Missed backups are checked again when StocklyMobi starts or remains running.
+
+Recommended first test:
+1. Build and run the project in Visual Studio.
+2. Open Settings > Database Backup.
+3. Keep SQL Default as the folder.
+4. Press Save Schedule.
+5. Press Backup Now.
+6. Confirm the success message and backup path.
+
+No SQL database migration is required.

@@ -1,0 +1,144 @@
+StocklyMobi Designer Edition 2.18.1 Cash Drawer Backport
+Static Validation Report
+
+Result: 136/136 checks passed
+
+Validation scope: Linux static source/package checks only.
+Not performed: Visual Studio compilation, SQL Server execution, Windows spooler test, XP-T80Q print test, or physical drawer test.
+
+[PASS] Exists: StocklyMobi/CashDrawerController.cs
+[PASS] Exists: StocklyMobi/PrinterConfiguration.cs
+[PASS] Exists: StocklyMobi/PrinterSettingsForm.cs
+[PASS] Exists: StocklyMobi/PrinterSettingsForm.Designer.cs
+[PASS] Exists: StocklyMobi/PrinterSettingsForm.resx
+[PASS] Exists: StocklyMobi/Settle.cs
+[PASS] Exists: StocklyMobi/StocklyMobi.csproj
+[PASS] Exists: StocklyMobi/Properties/Settings.settings
+[PASS] Exists: StocklyMobi/Properties/Settings.Designer.cs
+[PASS] 2.18 inventory preserved: InventoryInvoiceForm.cs
+[PASS] 2.18 inventory preserved: InventoryInvoiceForm.Designer.cs
+[PASS] 2.18 inventory preserved: InventoryInvoiceForm.resx
+[PASS] 2.18 product file preserved: Product.cs
+[PASS] 2.18 product file preserved: Product.Designer.cs
+[PASS] 2.18 product file preserved: Product.resx
+[PASS] 2.18 product file preserved: ProductStockIn.cs
+[PASS] 2.18 product file preserved: ProductStockIn.Designer.cs
+[PASS] 2.18 product file preserved: ProductStockIn.resx
+[PASS] 2.18 product file preserved: NewProductQuickForm.cs
+[PASS] 2.18 product file preserved: NewProductQuickForm.Designer.cs
+[PASS] 2.18 product file preserved: NewProductQuickForm.resx
+[PASS] Only intended StocklyMobi source files changed — Changed: CashDrawerController.cs, PrinterConfiguration.cs, PrinterSettingsForm.Designer.cs, PrinterSettingsForm.cs, Properties/Settings.Designer.cs, Properties/Settings.settings, Settle.cs, StocklyMobi.csproj
+[PASS] Settle has duplicate-execution guard
+[PASS] Drawer is conditional on setting
+[PASS] Settle calls configured drawer
+[PASS] Transaction commit precedes drawer pulse
+[PASS] Drawer pulse precedes receipt print only within successful settle flow
+[PASS] Insufficient payment returns before transaction commit
+[PASS] Enter key suppresses duplicate keypress
+[PASS] Drawer failure does not undo saved transaction
+[PASS] CashDrawerController contains OpenPrinterW
+[PASS] CashDrawerController contains StartDocPrinterW
+[PASS] CashDrawerController contains WritePrinter
+[PASS] CashDrawerController contains pDataType = "RAW"
+[PASS] CashDrawerController contains DrawerPulseCommand
+[PASS] CashDrawerController contains NormalizeProfile
+[PASS] Six drawer profiles are present
+[PASS] Pin 2/5 normalization exists
+[PASS] Configured drawer uses receipt printer
+[PASS] Printer settings UI contains chkAutoOpenCashDrawer
+[PASS] Printer settings UI contains btnTestDrawer
+[PASS] Printer settings UI contains cboDrawerPin
+[PASS] Printer settings UI contains cboDrawerProfile
+[PASS] Printer settings UI contains BtnTestDrawer_Click
+[PASS] Drawer test saves working selection
+[PASS] UI wording says successful settlement
+[PASS] Test message says used after Settle
+[PASS] Settings.settings contains AutoOpenCashDrawer
+[PASS] Settings.Designer contains AutoOpenCashDrawer
+[PASS] PrinterConfiguration exposes AutoOpenCashDrawer
+[PASS] Settings.settings contains CashDrawerPin
+[PASS] Settings.Designer contains CashDrawerPin
+[PASS] PrinterConfiguration exposes CashDrawerPin
+[PASS] Settings.settings contains CashDrawerProfile
+[PASS] Settings.Designer contains CashDrawerProfile
+[PASS] PrinterConfiguration exposes CashDrawerProfile
+[PASS] Default drawer pin is 2
+[PASS] Default drawer profile is 0
+[PASS] Project compiles CashDrawerController source
+[PASS] Drawer controller only referenced by Settle and Printer Settings — Refs: PrinterConfiguration.cs, PrinterSettingsForm.cs, Settle.cs
+[PASS] No drawer call in HistoricalReceiptPrinter.cs
+[PASS] No drawer call in ReceiptHistoryForm.cs
+[PASS] No drawer call in BarcodeLabelHelper.cs
+[PASS] No drawer call in InvoiceHistoryForm.cs
+[PASS] No drawer call in InventoryInvoiceForm.cs
+[PASS] InitializeComponent excludes runtime logic: foreach (
+[PASS] InitializeComponent excludes runtime logic: for (
+[PASS] InitializeComponent excludes runtime logic: while (
+[PASS] InitializeComponent excludes runtime logic: =>
+[PASS] InitializeComponent excludes runtime logic: delegate(
+[PASS] InitializeComponent excludes runtime logic: MobileShopDb
+[PASS] InitializeComponent excludes runtime logic: CashDrawerController.Open
+[PASS] InitializeComponent excludes runtime logic: Properties.Settings.Default.Save
+[PASS] Designer event hookup is named method
+[PASS] Form resx exists: Adjustments
+[PASS] Form resx exists: Alert
+[PASS] Form resx exists: Barcode
+[PASS] Form resx exists: Brand
+[PASS] Form resx exists: BrandModule
+[PASS] Form resx exists: CancelOrder
+[PASS] Form resx exists: Cashier
+[PASS] Form resx exists: CashierProviderBalancesForm
+[PASS] Form resx exists: Category
+[PASS] Form resx exists: CategoryModule
+[PASS] Form resx exists: ChangePassword
+[PASS] Form resx exists: DailySale
+[PASS] Form resx exists: Dashboard
+[PASS] Form resx exists: DeliverFixForm
+[PASS] Form resx exists: Discount
+[PASS] Form resx exists: DiscountHistoryForm
+[PASS] Form resx exists: ExchangeRateSettingsForm
+[PASS] Form resx exists: InventoryInvoiceForm
+[PASS] Form resx exists: InvoiceHistoryForm
+[PASS] Form resx exists: Login
+[PASS] Form resx exists: LookUpProduct
+[PASS] Form resx exists: MainForm
+[PASS] Form resx exists: MobileFixingForm
+[PASS] Form resx exists: NewProductQuickForm
+[PASS] Form resx exists: POSReport
+[PASS] Form resx exists: PrinterSettingsForm
+[PASS] Form resx exists: Product
+[PASS] Form resx exists: ProductModule
+[PASS] Form resx exists: ProductStockIn
+[PASS] Form resx exists: ProfitReportForm
+[PASS] Form resx exists: Qty
+[PASS] Form resx exists: QuantityPromptForm
+[PASS] Form resx exists: ReceiptHistoryForm
+[PASS] Form resx exists: Recept
+[PASS] Form resx exists: Record
+[PASS] Form resx exists: ResetPassword
+[PASS] Form resx exists: ServiceManagementForm
+[PASS] Form resx exists: ServicePickerForm
+[PASS] Form resx exists: Settle
+[PASS] Form resx exists: StockIn
+[PASS] Form resx exists: Store
+[PASS] Form resx exists: Supplier
+[PASS] Form resx exists: SupplierModule
+[PASS] Form resx exists: TextEntryDialog
+[PASS] Form resx exists: TransactionDiscountForm
+[PASS] Form resx exists: UserAccount
+[PASS] Form resx exists: UserProperties
+[PASS] Form resx exists: ValidityRetakeDialog
+[PASS] Form resx exists: Void
+[PASS] XML parses: StocklyMobi.csproj
+[PASS] XML parses: Properties/Settings.settings
+[PASS] XML parses: PrinterSettingsForm.resx
+[PASS] XML parses: Properties/Resources.resx
+[PASS] Brace balance: CashDrawerController.cs
+[PASS] Brace balance: PrinterConfiguration.cs
+[PASS] Brace balance: PrinterSettingsForm.cs
+[PASS] Brace balance: PrinterSettingsForm.Designer.cs
+[PASS] Brace balance: Properties/Settings.Designer.cs
+[PASS] Brace balance: Settle.cs
+[PASS] Database file unchanged: Database_Full.sql
+[PASS] Database file unchanged: MobileShopDb.cs
+[PASS] Database file unchanged: DatabaseBootstrapper.cs

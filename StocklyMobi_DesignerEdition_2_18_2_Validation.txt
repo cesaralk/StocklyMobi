@@ -1,0 +1,89 @@
+StocklyMobi Designer Edition 2.18.2 — Static Validation
+Base: Designer Edition 2.18.1 Cash Drawer Backport
+Feature: Safe stock-in invoice deletion from Invoice History
+
+001. PASS — Solution file exists
+002. PASS — Project file exists
+003. PASS — Invoice History code exists
+004. PASS — Invoice History Designer exists
+005. PASS — Invoice History resx exists
+006. PASS — Invoice deletion guide exists
+007. PASS — Patch instructions exist
+008. PASS — No stale .vs folders
+009. PASS — No stale bin folders
+010. PASS — No stale obj folders
+011. PASS — XML parses: StocklyMobi/StocklyMobi.csproj
+012. PASS — XML parses: StocklyMobi/InvoiceHistoryForm.resx
+013. PASS — XML parses: StocklyMobi/Properties/Settings.settings
+014. PASS — Designer contains private System.Windows.Forms.Button btnDelete;
+015. PASS — Designer contains this.btnDelete=new System.Windows.Forms.Button();
+016. PASS — Designer contains this.flowActions.Controls.Add(this.btnDelete);
+017. PASS — Designer contains this.btnDelete.Text="Delete Invoice";
+018. PASS — Designer contains this.btnDelete.Enabled=false;
+019. PASS — Designer contains this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+020. PASS — InitializeComponent excludes SqlConnection
+021. PASS — InitializeComponent excludes SqlCommand
+022. PASS — InitializeComponent excludes foreach (
+023. PASS — InitializeComponent excludes for (
+024. PASS — InitializeComponent excludes while (
+025. PASS — InitializeComponent excludes =>
+026. PASS — InitializeComponent excludes BeginTransaction
+027. PASS — InitializeComponent excludes ExecuteNonQuery
+028. PASS — InitializeComponent excludes ExecuteReader
+029. PASS — Invoice deletion code contains private void BtnDelete_Click(object sender, EventArgs e)
+030. PASS — Invoice deletion code contains IsolationLevel.Serializable
+031. PASS — Invoice deletion code contains WITH (UPDLOCK,HOLDLOCK)
+032. PASS — Invoice deletion code contains WHERE p.qty < x.InvoiceQty
+033. PASS — Invoice deletion code contains SET p.qty=p.qty-x.InvoiceQty
+034. PASS — Invoice deletion code contains DELETE FROM dbo.tbStockIn
+035. PASS — Invoice deletion code contains DELETE FROM dbo.tbStockInvoice WHERE id=@id
+036. PASS — Invoice deletion code contains tr.Commit();
+037. PASS — Invoice deletion code contains tr.Rollback();
+038. PASS — Invoice deletion code contains LoadInvoiceSuggestions();
+039. PASS — Invoice deletion code contains LoadInvoices();
+040. PASS — Invoice deletion code contains cannot be deleted because product
+041. PASS — Invoice deletion code contains A product can now be deleted only when its quantity is zero
+042. PASS — Stock reversal occurs before line deletion
+043. PASS — Line deletion occurs before header deletion
+044. PASS — Header deletion occurs before commit
+045. PASS — Negative stock guard occurs before reversal
+046. PASS — Delete button is disabled without selection
+047. PASS — Delete button is enabled after valid selection
+048. PASS — Lexical state closes: StocklyMobi/InvoiceHistoryForm.cs [code]
+049. PASS — Balanced braces: StocklyMobi/InvoiceHistoryForm.cs [48 open / 48 close]
+050. PASS — Balanced parentheses: StocklyMobi/InvoiceHistoryForm.cs [173 open / 173 close]
+051. PASS — Lexical state closes: StocklyMobi/InvoiceHistoryForm.Designer.cs [code]
+052. PASS — Balanced braces: StocklyMobi/InvoiceHistoryForm.Designer.cs [4 open / 4 close]
+053. PASS — Balanced parentheses: StocklyMobi/InvoiceHistoryForm.Designer.cs [160 open / 160 close]
+054. PASS — Project includes InvoiceHistoryForm.cs
+055. PASS — Project includes InvoiceHistoryForm.Designer.cs
+056. PASS — Project includes InvoiceHistoryForm.resx
+057. PASS — Project file unchanged from 2.18.1
+058. PASS — Database script unchanged from 2.18.1
+059. PASS — No SQL migration file added
+060. PASS — Preserved unchanged: StocklyMobi/InventoryInvoiceForm.cs
+061. PASS — Preserved unchanged: StocklyMobi/InventoryInvoiceForm.Designer.cs
+062. PASS — Preserved unchanged: StocklyMobi/InventoryInvoiceForm.resx
+063. PASS — Preserved unchanged: StocklyMobi/CashDrawerController.cs
+064. PASS — Preserved unchanged: StocklyMobi/PrinterConfiguration.cs
+065. PASS — Preserved unchanged: StocklyMobi/PrinterSettingsForm.cs
+066. PASS — Preserved unchanged: StocklyMobi/PrinterSettingsForm.Designer.cs
+067. PASS — Preserved unchanged: StocklyMobi/PrinterSettingsForm.resx
+068. PASS — Preserved unchanged: StocklyMobi/Properties/Settings.settings
+069. PASS — Preserved unchanged: StocklyMobi/Properties/Settings.Designer.cs
+070. PASS — Preserved unchanged: StocklyMobi/Settle.cs
+071. PASS — Preserved unchanged: StocklyMobi/Settle.Designer.cs
+072. PASS — Preserved unchanged: StocklyMobi/Settle.resx
+073. PASS — Preserved unchanged: StocklyMobi/BarcodeLabelHelper.cs
+074. PASS — Preserved unchanged: StocklyMobi/StockInvoicePrinter.cs
+075. PASS — Preserved unchanged: StocklyMobi/HistoricalReceiptPrinter.cs
+076. PASS — Preserved unchanged: StocklyMobi/MobileFixTicketPrinter.cs
+077. PASS — Preserved unchanged: StocklyMobi/MobileShopDb.cs
+078. PASS — Preserved unchanged: StocklyMobi/ReceiptHistoryForm.cs
+079. PASS — Preserved unchanged: StocklyMobi/ReceiptHistoryForm.Designer.cs
+080. PASS — Preserved unchanged: StocklyMobi/ReceiptHistoryForm.resx
+081. PASS — Only expected existing files changed [START_HERE.md, StocklyMobi/InvoiceHistoryForm.Designer.cs, StocklyMobi/InvoiceHistoryForm.cs]
+
+TOTAL: 81/81 passed; 0 failed.
+
+Environment limitation: Visual Studio/MSBuild, SQL Server, Windows printer, and physical cash-drawer runtime testing were not available in this Linux environment. This report covers static source, structure, preservation, and transaction-safety checks only.

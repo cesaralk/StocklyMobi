@@ -1,0 +1,35 @@
+StocklyMobi Designer Edition 2.18.2 — Invoice History Deletion
+
+PATCH BASE
+----------
+Apply this patch only to StocklyMobi Designer Edition 2.18.1 Cash Drawer Backport.
+
+WHAT IT CHANGES
+---------------
+Adds a red Delete Invoice button to Invoice History.
+
+A confirmed deletion safely reverses that invoice's product quantities, deletes
+its tbStockIn rows, and then deletes its tbStockInvoice header in one SQL
+transaction. It is blocked when the reversal would make any stock quantity
+negative.
+
+WHAT IT PRESERVES
+-----------------
+- The preferred Product & Stock-In design from 2.18.
+- Cash-drawer settings and successful-settlement behavior from 2.18.1.
+- Receipt, barcode, A4 invoice, services, repairs, reports, and database schema.
+
+HOW TO APPLY
+------------
+1. Close Visual Studio and StocklyMobi.
+2. Back up the project and database.
+3. Copy the StocklyMobi folder from this patch over the existing 2.18.1 project.
+4. Allow Windows to replace the matching InvoiceHistoryForm files.
+5. Delete stale .vs, bin, and obj folders.
+6. Open StocklyMobi.sln.
+7. Clean Solution and Rebuild Solution.
+8. Open Admin > Invoice History and test with a disposable invoice/product.
+
+DATABASE
+--------
+No SQL migration is required.

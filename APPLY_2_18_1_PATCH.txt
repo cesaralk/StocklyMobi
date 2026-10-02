@@ -1,0 +1,42 @@
+StocklyMobi Designer Edition 2.18.1 — Cash Drawer Backport
+
+PATCH BASE
+----------
+Apply this patch only to StocklyMobi Designer Edition 2.18.
+Do not apply it to 2.19, 2.20, or 2.20.1.
+
+WHAT IT CHANGES
+---------------
+Adds the 2.20.1 cash-drawer controller, settings UI, pin/profile settings,
+and successful-settlement trigger while preserving the Product & Stock-In
+files and design from 2.18.
+
+HOW TO APPLY
+------------
+1. Close Visual Studio.
+2. Make a backup of your current 2.18 project.
+3. Copy the StocklyMobi folder from this patch over your 2.18 StocklyMobi folder.
+4. Allow Windows to replace the matching files.
+5. Reopen StocklyMobi.sln in Visual Studio and rebuild.
+6. Open Admin > Printer Settings.
+7. Select XP-T80Q as the receipt printer.
+8. Enable cash drawer after successful settlement.
+9. Select Pin 2 and a working command profile.
+
+IMPORTANT DRIVER SETTING
+------------------------
+In the XP-T80Q Windows driver, disable opening the drawer before/after printing.
+StocklyMobi must control the drawer. Otherwise every print job will open it.
+
+EXPECTED BEHAVIOR
+-----------------
+- Successful Settle by Enter/final Settle button: drawer opens once.
+- Insufficient payment or failed transaction: drawer stays closed.
+- Receipt reprint: drawer stays closed.
+- Receipt printer test: drawer stays closed.
+- Barcode and A4 printing: drawer stays closed.
+- Test Drawer button: opens only when deliberately pressed.
+
+DATABASE
+--------
+No SQL migration is required.

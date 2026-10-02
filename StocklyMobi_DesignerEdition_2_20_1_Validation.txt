@@ -1,0 +1,95 @@
+StocklyMobi Designer Edition 2.20.1 — Drawer Compatibility Profiles
+==============================================================================
+Generated: 2026-07-14 23:12:02
+
+Source basis
+------------
+Designer Edition 2.20.
+
+Implemented
+-----------
+- Replaced the single cash-drawer pulse with six compatibility profiles.
+- Default profile uses ASCII connector values 48/49.
+- Recommended profile sends ESC @ before ESC p.
+- Retained binary 0/1, short-pulse, ASCII, and legacy profiles.
+- Added a Command Profile selector to Printer Settings.
+- Test Drawer now asks whether the drawer physically opened.
+- Answering Yes saves the tested printer, pin, and profile immediately.
+- Answering No selects the next profile automatically.
+- Settle uses the saved working profile.
+
+Database
+--------
+No SQL or database migration is required.
+
+Checks passed: 56
+Checks failed: 0
+
+[PASS] CashDrawerController.cs: braces balanced
+[PASS] CashDrawerController.cs: parentheses balanced
+[PASS] CashDrawerController.cs: brackets balanced
+[PASS] CashDrawerController.cs: string literals valid — []
+[PASS] PrinterConfiguration.cs: braces balanced
+[PASS] PrinterConfiguration.cs: parentheses balanced
+[PASS] PrinterConfiguration.cs: brackets balanced
+[PASS] PrinterConfiguration.cs: string literals valid — []
+[PASS] PrinterSettingsForm.cs: braces balanced
+[PASS] PrinterSettingsForm.cs: parentheses balanced
+[PASS] PrinterSettingsForm.cs: brackets balanced
+[PASS] PrinterSettingsForm.cs: string literals valid — []
+[PASS] PrinterSettingsForm.Designer.cs: braces balanced
+[PASS] PrinterSettingsForm.Designer.cs: parentheses balanced
+[PASS] PrinterSettingsForm.Designer.cs: brackets balanced
+[PASS] PrinterSettingsForm.Designer.cs: string literals valid — []
+[PASS] Properties/Settings.Designer.cs: braces balanced
+[PASS] Properties/Settings.Designer.cs: parentheses balanced
+[PASS] Properties/Settings.Designer.cs: brackets balanced
+[PASS] Properties/Settings.Designer.cs: string literals valid — []
+[PASS] Recommended profile uses ASCII connector 48/49
+[PASS] Printer initialize command ESC @ is supported
+[PASS] Six drawer compatibility profiles exist
+[PASS] Binary connector 0/1 profiles remain available
+[PASS] ASCII connector 48/49 profiles are available
+[PASS] Legacy 2.20 command remains available
+[PASS] Saved profile is used by Settle
+[PASS] PrinterConfiguration exposes normalized profile
+[PASS] Printer Settings saves selected profile
+[PASS] Printer Settings loads selected profile
+[PASS] Test asks whether the drawer physically opened
+[PASS] Working profile saves automatically
+[PASS] Failed test selects the next profile
+[PASS] Profile selector is Designer-visible
+[PASS] Recommended profile is first in Designer
+[PASS] CashDrawerProfile setting defaults to zero
+[PASS] Generated settings property exists
+[PASS] Every Printer Settings Designer event handler exists
+[PASS] Printer Settings Designer component names are unique
+[PASS] Valid XML: StocklyMobi.csproj
+[PASS] Valid XML: Properties/Settings.settings
+[PASS] Valid XML: PrinterSettingsForm.resx
+[PASS] All project C# files have valid string boundaries — {}
+[PASS] All project C# files have balanced delimiters — {}
+[PASS] Unrelated file unchanged: StocklyMobi/Database_Full.sql
+[PASS] Unrelated file unchanged: StocklyMobi_MobileShop_Full_Database.sql
+[PASS] Unrelated file unchanged: StocklyMobi/MobileShopDb.cs
+[PASS] Unrelated file unchanged: StocklyMobi/Cashier.cs
+[PASS] Unrelated file unchanged: StocklyMobi/Settle.cs
+[PASS] Unrelated file unchanged: StocklyMobi/Void.cs
+[PASS] Unrelated file unchanged: StocklyMobi/HistoricalReceiptPrinter.cs
+[PASS] Unrelated file unchanged: StocklyMobi/MobileFixTicketPrinter.cs
+[PASS] Unrelated file unchanged: StocklyMobi/BarcodeLabelHelper.cs
+[PASS] Unrelated file unchanged: StocklyMobi/InventoryInvoiceForm.cs
+[PASS] Unrelated file unchanged: StocklyMobi/InventoryInvoiceForm.Designer.cs
+[PASS] Unrelated file unchanged: StocklyMobi/ServiceManagementForm.cs
+
+Testing limitation
+------------------
+This environment does not contain the Windows print spooler, receipt printer,
+or physical drawer. The command profiles were statically validated but must
+be tested on the shop computer.
+
+Recommended test:
+1. Select the receipt printer and Pin 2.
+2. Test Generic ASCII 48/49.
+3. Answer No to advance until one profile opens the drawer.
+4. Answer Yes to save the working profile.

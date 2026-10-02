@@ -1,0 +1,117 @@
+StocklyMobi custom database backup static validation
+Passed: 94/94
+
+[PASS] XML parses: StocklyMobi.csproj
+[PASS] XML parses: Properties/Settings.settings
+[PASS] XML parses: BackupSettingsForm.resx
+[PASS] Balanced delimiters: BackupConfiguration.cs
+[PASS] Balanced delimiters: BackupLog.cs
+[PASS] Balanced delimiters: DatabaseBackupService.cs
+[PASS] Balanced delimiters: BackupScheduler.cs
+[PASS] Balanced delimiters: BackupRuntimeMonitor.cs
+[PASS] Balanced delimiters: BackupSettingsForm.cs
+[PASS] Balanced delimiters: BackupSettingsForm.Designer.cs
+[PASS] Balanced delimiters: Program.cs
+[PASS] Balanced delimiters: MainForm.cs
+[PASS] Balanced delimiters: MainForm.Designer.cs
+[PASS] Balanced delimiters: Properties/Settings.Designer.cs
+[PASS] Project includes BackupConfiguration.cs
+[PASS] Project includes BackupLog.cs
+[PASS] Project includes DatabaseBackupService.cs
+[PASS] Project includes BackupScheduler.cs
+[PASS] Project includes BackupRuntimeMonitor.cs
+[PASS] Project includes BackupSettingsForm.cs
+[PASS] Project includes BackupSettingsForm.Designer.cs
+[PASS] Project includes BackupSettingsForm.resx
+[PASS] Handler exists BackupSettingsForm_Load
+[PASS] Handler exists BtnBackupNow_Click
+[PASS] Handler exists BtnChooseFolder_Click
+[PASS] Handler exists BtnOpenFolder_Click
+[PASS] Handler exists BtnOpenLog_Click
+[PASS] Handler exists BtnSaveSchedule_Click
+[PASS] Handler exists BtnUseSqlDefault_Click
+[PASS] Handler exists ChkAutomaticBackup_CheckedChanged
+[PASS] Main backup handler exists
+[PASS] Designer avoids for (
+[PASS] Designer avoids foreach (
+[PASS] Designer avoids while (
+[PASS] Designer avoids =>
+[PASS] Designer avoids delegate
+[PASS] Designer avoids SqlConnection
+[PASS] Designer avoids DatabaseBackupService.
+[PASS] Designer avoids BackupScheduler.
+[PASS] Designer avoids Task.Run
+[PASS] Designer has standard event hookups
+[PASS] Setting XML AutomaticDatabaseBackupEnabled
+[PASS] Setting property AutomaticDatabaseBackupEnabled
+[PASS] Setting XML AutomaticDatabaseBackupTime
+[PASS] Setting property AutomaticDatabaseBackupTime
+[PASS] Setting XML DatabaseBackupFolder
+[PASS] Setting property DatabaseBackupFolder
+[PASS] Setting XML LastDatabaseBackupUtc
+[PASS] Setting property LastDatabaseBackupUtc
+[PASS] Setting XML LastDatabaseBackupAttemptUtc
+[PASS] Setting property LastDatabaseBackupAttemptUtc
+[PASS] Setting XML LastDatabaseBackupFile
+[PASS] Setting property LastDatabaseBackupFile
+[PASS] Setting XML LastDatabaseBackupStatus
+[PASS] Setting property LastDatabaseBackupStatus
+[PASS] Setting XML LastDatabaseBackupMessage
+[PASS] Setting property LastDatabaseBackupMessage
+[PASS] Full BACKUP DATABASE used
+[PASS] COPY_ONLY used
+[PASS] Backup CHECKSUM used
+[PASS] RESTORE VERIFYONLY used
+[PASS] Verification CHECKSUM used
+[PASS] Timestamped .bak filename
+[PASS] Named mutex prevents overlap
+[PASS] Default SQL backup folder queried
+[PASS] Pre-2019 backup folder fallback
+[PASS] Scheduled task daily
+[PASS] Scheduled task start when available
+[PASS] Scheduled task ignores overlapping instances
+[PASS] Scheduled task uses current executable
+[PASS] Scheduled task uses current user
+[PASS] Headless backup command recognized
+[PASS] Runtime missed-backup check
+[PASS] Default time is 11 PM
+[PASS] Automatic backup enabled by default
+[PASS] Manual backup forced
+[PASS] No SQL schema migration added
+[PASS] Preserved MobileShopDb.cs
+[PASS] Preserved InventoryInvoiceForm.cs
+[PASS] Preserved InventoryInvoiceForm.Designer.cs
+[PASS] Preserved InventoryInvoiceForm.resx
+[PASS] Preserved InvoiceHistoryForm.cs
+[PASS] Preserved InvoiceHistoryForm.Designer.cs
+[PASS] Preserved InvoiceHistoryForm.resx
+[PASS] Preserved Settle.cs
+[PASS] Preserved Settle.Designer.cs
+[PASS] Preserved Settle.resx
+[PASS] Preserved CashDrawerController.cs
+[PASS] Preserved PrinterSettingsForm.cs
+[PASS] Preserved PrinterSettingsForm.Designer.cs
+[PASS] Preserved PrinterSettingsForm.resx
+[PASS] Preserved Properties/Resources.resx
+[PASS] Preserved Properties/Resources.Designer.cs
+[PASS] Only focused project files changed | changed=["BackupConfiguration.cs", "BackupLog.cs", "BackupRuntimeMonitor.cs", "BackupScheduler.cs", "BackupSettingsForm.Designer.cs", "BackupSettingsForm.cs", "BackupSettingsForm.resx", "DATABASE_BACKUP_GUIDE.md", "DatabaseBackupService.cs", "MainForm.Designer.cs", "MainForm.cs", "Program.cs", "Properties/Settings.Designer.cs", "Properties/Settings.settings", "StocklyMobi.csproj"]
+
+Changed project files:
+BackupConfiguration.cs
+BackupLog.cs
+BackupRuntimeMonitor.cs
+BackupScheduler.cs
+BackupSettingsForm.Designer.cs
+BackupSettingsForm.cs
+BackupSettingsForm.resx
+DATABASE_BACKUP_GUIDE.md
+DatabaseBackupService.cs
+MainForm.Designer.cs
+MainForm.cs
+Program.cs
+Properties/Settings.Designer.cs
+Properties/Settings.settings
+StocklyMobi.csproj
+
+Environment note:
+No Windows/.NET Framework compiler, SQL Server instance, Windows Task Scheduler, or live backup destination was available in this Linux environment.
